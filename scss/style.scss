@@ -1,3 +1,5 @@
+@use '_globals' as *;
+
 * {
     margin: 0;
     padding: 0;
@@ -8,4 +10,81 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px 16px;
-} 
+}
+
+.services__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+
+    .services__wrapper__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+        gap: 14px;
+
+        h1 {
+            font-size: 32px;
+            font-weight: 400;
+            color: $mainColor;
+            font-family: 'Source Serif Pro';
+        }
+
+        p {
+            max-width: 588px;
+            text-align: center;
+            color: $p-color;
+            font-family: $robotoFont;
+        }
+    }
+
+
+    .services__wrapper__content {
+        display: flex; 
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+
+        .card {
+            display: flex; 
+            border-radius: 16px;
+            flex-direction: column;
+            background-color: #F4F3F0;
+            padding: 30px;
+            gap: 10px;
+
+            h1 {
+                color: $mainColor;
+                font-size: 24px;
+            }
+
+            p {
+                max-width: 310px;
+                color: $p-color;
+            }
+
+            img {
+                width: 48px;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            span {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: $mainColor;
+
+                img {
+                    width: 20px;
+                    height: 10px;
+                }
+            }
+        }
+    }
+}
